@@ -1,0 +1,126 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+
+    a, ul {
+        color: white;
+        text-decoration: none;
+        list-style: none;
+    }
+}
+
+:root {
+    --primary-color: #;
+    --secondary-color: #5e17eb;
+    --background-color: #262526;
+    --text-color: #d7d8da;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+header {
+    /*Position for the header and navigation*/
+    .header {
+        display: flex;
+        flex-direction: row;
+        justify-content:space-between;
+        margin: 2rem;
+        white-space: nowrap; /*It will prevent the text from wrapping to the next line*/
+
+        /*Header fixed*/
+        position: fixed;
+        top: 0;
+        width: 95%;
+        align-items: center;
+        z-index: 10000;
+
+        /*Style*/
+        .navbar {
+            display: flex;
+            a {
+                padding: 10px;
+            }
+
+        }
+
+        #coder {
+            color: var(--secondary-color);
+            font-size: 1rem;
+        }
+    }
+}
+main { /*Styles for hero*/
+    margin: 2rem;
+
+    .hero { 
+        height: 100vh;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: left;
+
+        img {
+            width: 300px;
+            height: 300px;
+        }
+
+        #type-name::after {
+            content: '|';
+            right: 0;
+            animation: blink 0.7s steps(5) infinite;
+        }
+
+        @keyframes blink {
+            0%, 100% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0;
+            }
+            
+        }
+    }
+}
+
+
+#projects {
+    text-align: center;
+
+    .content-projects {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .item-project {
+        flex-grow: 1;
+        flex-basis: 200px;
+        margin: 10px;
+        max-width: 90%;
+        text-align: center;
+        border: 1px solid var(--secondary-color);
+        border-radius: 20px;
+        flex-grow: 1;
+        
+        img {
+            width: 50%;
+        }
+
+        button {
+            margin: 10px;
+            padding: 5px;
+            font-size: .8rem;
+            color: var(--background-color);
+            background-color: var(--secondary-color);
+            border: 1rem solid var(--background-color);
+            border-radius: 2rem;
+        }
+  
+    }
+    
+}
