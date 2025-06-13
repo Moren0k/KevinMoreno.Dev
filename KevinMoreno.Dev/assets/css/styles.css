@@ -26,16 +26,16 @@ body {
 header {
     /*Position for the header and navigation*/
     .header {
+        padding: 10px;
         display: flex;
         flex-direction: row;
         justify-content:space-between;
-        margin: 2rem;
         white-space: nowrap; /*It will prevent the text from wrapping to the next line*/
 
         /*Header fixed*/
         position: fixed;
         top: 0;
-        width: 95%;
+        width: 100%;
         align-items: center;
         z-index: 10000;
 
@@ -48,9 +48,23 @@ header {
 
         }
 
+        h1 {
+            font-size: 2rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            letter-spacing: -3px;
+            font-weight: bold;
+        }
+
         #coder {
             color: var(--secondary-color);
-            font-size: 1rem;
+            font-size: 1.2rem;
+            text-shadow: 1px 2px 3px var(--secondary-color);
+            position: relative;
+            top: -10px;
+
         }
     }
 }
@@ -61,19 +75,43 @@ main { /*Styles for hero*/
         height: 100vh;
         width: 100%;
         display: flex;
+        flex-direction: row;
         justify-content: center;
         align-items: center;
-        text-align: left;
+        text-align: center;
 
         img {
-            width: 300px;
-            height: 300px;
+            margin: 2rem;
+            padding: 0.5rem;
+            width: 15%;
+            border: 0.5px solid var(--secondary-color);
+            border-radius: 2rem;
+        }
+
+        .cta {
+            button {
+                padding: 15px;
+                margin: 1rem;
+                border-radius: 2rem;
+                background-color: var(--background-color);
+                border: 1px solid var(--secondary-color);
+                white-space: nowrap;
+            }
+            
+            button:hover {
+                background-color: rgb(85, 80, 80);
+                border: none;
+                font-size: 1rem;
+            }
+            .contme {
+                    background-color: var(--secondary-color);
+                }
+            
         }
 
         #type-name::after {
             content: '|';
-            right: 0;
-            animation: blink 0.7s steps(5) infinite;
+
         }
 
         @keyframes blink {
@@ -90,7 +128,7 @@ main { /*Styles for hero*/
 }
 
 
-#projects {
+#projects-placeholder {
     text-align: center;
 
     .content-projects {
@@ -100,11 +138,11 @@ main { /*Styles for hero*/
     .item-project {
         flex-grow: 1;
         flex-basis: 200px;
-        margin: 10px;
+        margin: 2rem;
         max-width: 90%;
         text-align: center;
         border: 1px solid var(--secondary-color);
-        border-radius: 20px;
+        border-radius: 2rem;
         flex-grow: 1;
         
         img {
@@ -112,7 +150,7 @@ main { /*Styles for hero*/
         }
 
         button {
-            margin: 10px;
+            margin: 1rem;
             padding: 5px;
             font-size: .8rem;
             color: var(--background-color);
@@ -123,4 +161,26 @@ main { /*Styles for hero*/
   
     }
     
+}
+
+/*Responsive*/
+@media (max-width: 420px) {
+    header {
+        .header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+    }
+
+    main { /*Styles for hero*/
+    margin: 2rem;
+
+        .hero { 
+            display: flex;
+            flex-direction: column;
+        }
+    }
 }
