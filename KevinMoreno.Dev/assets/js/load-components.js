@@ -16,4 +16,8 @@ document.addEventListener('DOMContentLoaded', () => {
   loadHTML('components/footer.html', 'footer-placeholder');
     // Cargar projects
   loadHTML('components/projects.html', 'projects-placeholder');
+    // Cargar Hero
+  loadHTML('components/hero.html', 'hero-placeholder')
+    // Cargar Contact
+  loadHTML('components/contact.html','contact-placeholder')
 });

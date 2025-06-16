@@ -2,185 +2,107 @@
     margin: 0;
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
-    font-weight: bold;
+    box-sizing: border-box;
 
     a, ul {
-        color: white;
         text-decoration: none;
         list-style: none;
+        color: var(--text-color);
     }
 }
 
 :root {
-    --primary-color: #;
-    --secondary-color: #5e17eb;
-    --background-color: #262526;
-    --text-color: #d7d8da;
+    /* Colores principales */
+    --primary-color: #5e17eb; /* Tu púrpura vibrante, ideal para acentos y elementos interactivos */
+    --background-color: #262526; /* Fondo gris muy oscuro, la base de tu diseño */
+    --text-color: #F5F5F5; /* Blanco muy claro para el texto principal, excelente contraste */
+
+    /* Variaciones de colores (para estados interactivos o superficies) */
+    --primary-color-hover: #7b4feb; /* Un tono ligeramente más claro del púrpura para el hover de botones/enlaces */
+    --surface-color: #303030; /* Un gris un poco más claro que el fondo, útil para tarjetas o modales elevados */
 }
 
 body {
-    background-color: var(--background-color);
     color: var(--text-color);
-}
-
-header {
-    /*Position for the header and navigation*/
-    .header {
-        padding: 10px;
-        display: flex;
-        flex-direction: row;
-        justify-content:space-between;
-        white-space: nowrap; /*It will prevent the text from wrapping to the next line*/
-
-        /*Header fixed*/
-        position: fixed;
-        top: 0;
-        width: 100%;
-        align-items: center;
-        z-index: 10000;
-
-        /*Style*/
-        .navbar {
-            display: flex;
-            a {
-                padding: 10px;
-            }
-
-        }
-
-        h1 {
-            font-size: 2rem;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-            letter-spacing: -3px;
-            font-weight: bold;
-        }
-
-        #coder {
-            color: var(--secondary-color);
-            font-size: 1.2rem;
-            text-shadow: 1px 2px 3px var(--secondary-color);
-            position: relative;
-            top: -10px;
-
-        }
-    }
-}
-main { /*Styles for hero*/
-    margin: 2rem;
-
-    .hero { 
-        height: 100vh;
-        width: 100%;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-
-        img {
-            margin: 2rem;
-            padding: 0.5rem;
-            width: 15%;
-            border: 0.5px solid var(--secondary-color);
-            border-radius: 2rem;
-        }
-
-        .cta {
-            button {
-                padding: 15px;
-                margin: 1rem;
-                border-radius: 2rem;
-                background-color: var(--background-color);
-                border: 1px solid var(--secondary-color);
-                white-space: nowrap;
-            }
-            
-            button:hover {
-                background-color: rgb(85, 80, 80);
-                border: none;
-                font-size: 1rem;
-            }
-            .contme {
-                    background-color: var(--secondary-color);
-                }
-            
-        }
-
-        #type-name::after {
-            content: '|';
-
-        }
-
-        @keyframes blink {
-            0%, 100% {
-                opacity: 1;
-            }
-
-            50% {
-                opacity: 0;
-            }
-            
-        }
-    }
-}
-
-
-#projects-placeholder {
+    background-color: var(--background-color);
     text-align: center;
+}
 
-    .content-projects {
-        display: flex;
-        flex-wrap: wrap;
-    }
-    .item-project {
-        flex-grow: 1;
-        flex-basis: 200px;
-        margin: 2rem;
-        max-width: 90%;
-        text-align: center;
-        border: 1px solid var(--secondary-color);
-        border-radius: 2rem;
-        flex-grow: 1;
-        
-        img {
-            width: 50%;
+#header-placeholder {
+    position: fixed;
+    padding: 20px 20px 10px 20px;
+    top: 0;
+    left: 0;
+    width:100%;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-around;
+    font-weight: bold; 
+    white-space: nowrap;
+    backdrop-filter: blur(10px);
+
+    .kevin_moreno {
+        font-size: 1rem;
+
+        .coder {
+            color: var(--primary-color);
+            text-shadow: 1px 1px 4px var(--primary-color-hover);
+            font-size: 1.3rem; 
         }
+    }
+
+    .navbar {
+        display: flex;
+
+        li {
+            margin: 10px;
+        }
+
+        a:hover {
+            color: var(--primary-color);
+            text-shadow: 1px 1px 4px var(--primary-color);
+        }
+    }
+}
+
+/*HERO Process*/
+#hero-placeholder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    
+    .cta {
+        display: flex;
+        justify-content: center;
+        font-weight: bold;
 
         button {
-            margin: 1rem;
-            padding: 5px;
-            font-size: .8rem;
-            color: var(--background-color);
-            background-color: var(--secondary-color);
-            border: 1rem solid var(--background-color);
-            border-radius: 2rem;
+            margin: 10px;
+            padding: 10px;
+            border-radius: 20px;
         }
-  
+
+        button:hover {
+            background-color: var(--surface-color);
+            border: 1px solid var(--surface-color);
+        }
+
+        .cv {
+            background-color: var(--background-color);
+            border: 1px solid var(--primary-color);
+        }
+
+        .wpp {
+            background-color: var(--primary-color);
+            border: 1px solid var(--background-color);
+
+        }
     }
-    
 }
 
-/*Responsive*/
-@media (max-width: 420px) {
-    header {
-        .header {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-        }
-    }
 
-    main { /*Styles for hero*/
-    margin: 2rem;
-
-        .hero { 
-            display: flex;
-            flex-direction: column;
-        }
-    }
+img {
+    height: 500px;
 }
