@@ -137,7 +137,7 @@ body {
             border-radius: 20px;
             padding: 20px;
             width: 50%;
-            height: auto%;
+            height: auto;
             flex-basis: 300px;
             flex-grow: 1;
         }
