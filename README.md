@@ -42,3 +42,6 @@
             └── load-components.js
 
 Se implementó la carga dinámica del header y footer desde archivos externos ubicados en components/, usando un script en assets/js/load-components.js. Así se evita repetir código y se facilita el mantenimiento del proyecto.
+
+Iconos svg:
+[text](https://simpleicons.org/)
