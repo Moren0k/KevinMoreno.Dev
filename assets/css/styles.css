@@ -72,6 +72,7 @@ body {
     align-items: center;
     height: 100vh;
     text-align: center;
+    margin: 10px;
 
     img {
         width: 25%;
@@ -150,5 +151,19 @@ body {
             border-radius: 20px;
         }
         
+    }
+}
+
+@media (max-width: 425px) {
+    #header-placeholder {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #hero-placeholder {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 }
