@@ -4,27 +4,31 @@
 
     KevinMoreno.Dev/
     │
-    ├── index.html # Página principal
-    ├── README.md  # Información sobre el proyecto
+    ├── index.html                  # Página principal
+    ├── README.md                   # Información del proyecto
     │
     ├── assets/
-    │       ├── css/
-    │       │    └── styles.css
-    │       ├── js/
-    │       │    ├── load-components.js
-    |       |    └── main.js
-    │       └── img/
-    |       |    ├── (image-name)
-    |       |    └── svg/
-    |       └── docs/
-    |            └── (document-name)
-    |
-    └── components/
-            ├── header.html
-            ├── hero.html 
-            ├── projects.html 
-            ├── contact.html
-            └── footer.html
+    │   ├── css/
+    │   │   ├── styles.css          # Estilos generales
+    │   │   └── about.css           # Estilos específicos para la página About
+    │   │
+    │   ├── js/
+    │   │   ├── load-components.js  # Script que carga componentes dinámicamente
+    │   │   └── main.js             # JS principal del sitio
+    │   │
+    │   └── img/                    # Imágenes del sitio
+    │       └── svg/                # SVGs si tienes
+    │
+    ├── pages/
+    │   ├── about.html              # Página "About Me"
+    │   │
+    │   └── components/             # Componentes HTML reutilizables
+    │       ├── header.html
+    │       ├── hero.html
+    │       ├── projects.html
+    │       ├── contact.html
+    │       └── footer.html
+
     
 ### Reciclaje de código HTML con JS Externo
 

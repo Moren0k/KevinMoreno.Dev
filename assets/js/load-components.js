@@ -8,16 +8,13 @@ function loadHTML(url, elementId) {
     .catch(err => console.error(`Error cargando ${url}:`, err));
 }
 
-// Cargar header y footer
+// Detectar base path según ubicación de la página actual
+const basePath = window.location.pathname.includes('/pages/') ? 'components/' : 'pages/components/';
+
 document.addEventListener('DOMContentLoaded', () => {
-    // Cargar header
-  loadHTML('components/header.html', 'header-placeholder'); 
-    // Cargar footer
-  loadHTML('components/footer.html', 'footer-placeholder');
-    // Cargar projects
-  loadHTML('components/projects.html', 'projects-placeholder');
-    // Cargar Hero
-  loadHTML('components/hero.html', 'hero-placeholder')
-    // Cargar Contact
-  loadHTML('components/contact.html','contact-placeholder')
+  loadHTML(basePath + 'header.html', 'header-placeholder');
+  loadHTML(basePath + 'footer.html', 'footer-placeholder');
+  loadHTML(basePath + 'projects.html', 'projects-placeholder');
+  loadHTML(basePath + 'hero.html', 'hero-placeholder');
+  loadHTML(basePath + 'contact.html', 'contact-placeholder');
 });
