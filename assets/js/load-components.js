@@ -13,8 +13,9 @@ const basePath = window.location.pathname.includes('/pages/') ? 'components/' : 
 
 document.addEventListener('DOMContentLoaded', () => {
   loadHTML(basePath + 'header.html', 'header-placeholder');
-  loadHTML(basePath + 'footer.html', 'footer-placeholder');
-  loadHTML(basePath + 'projects.html', 'projects-placeholder');
   loadHTML(basePath + 'hero.html', 'hero-placeholder');
+  loadHTML(basePath + 'projects.html', 'projects-placeholder');
+  loadHTML(basePath + 'skills.html', 'skills-placeholder');
   loadHTML(basePath + 'contact.html', 'contact-placeholder');
+  loadHTML(basePath + 'footer.html', 'footer-placeholder');
 });

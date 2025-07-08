@@ -1,64 +1,115 @@
-#about-placeholder {
-    min-height: 100vh;
-    justify-content: center;
-    padding: 60px 20px;
-    display: flex;
+/* No es necesario definir :root aquí si ya lo tienes en otro archivo,
+   pero lo incluyo para referencia si este fuera el único archivo CSS */
+/*
+:root {
+    --primary-color: #5e17eb;
+    --background-color: #262526;
+    --text-color: #F5F5F5;
+    --primary-color-hover: #7b4feb;
+    --surface-color: #303030;
+}
+*/
+
+/* Variables específicas para esta sección, si no las tienes en :root */
+:root {
+  --heading-color: var(--primary-color); /* Los títulos usarán el color púrpura vibrante */
+  --shadow-color: rgba(94, 23, 235, 0.4); /* Sombra basada en el primary-color con opacidad */
+}
+
+/* --- */
+
+/* Estilos generales para la sección about */
+.about-placeholder {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 20px;
+  background-color: var(--background-color); /* Usa tu color de fondo oscuro */
+  color: var(--text-color); /* Usa tu color de texto claro */
+  text-align: center;
+}
+
+/* Contenedor principal del contenido de "About" */
+.about-content {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  max-width: 1000px;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+
+/* Estilos para el texto de "About" */
+.about-text {
+  max-width: 600px;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  text-align: left;
+}
+
+.about-text h2 {
+  text-shadow: 1px 1px 4px var(--primary-color);
+  color: var(--heading-color); /* Ahora los títulos son de tu primary-color */
+  text-shadow: 1px 1px 4px var(--shadow-color); /* Sombra para resaltar el texto */
+  margin-bottom: 25px;
+  font-size: 2.5em;
+  font-weight: 700;
+  text-align: center;
+}
+
+.about-text p {
+  margin-bottom: 15px;
+  color: var(--text-color); /* Asegura que los párrafos usen tu text-color */
+}
+
+/* Estilos para la imagen (si se incluye) */
+.about-img {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid var(--primary-color); /* Borde con tu primary-color */
+  box-shadow: 0 0 20px var(--primary-color-hover); /* Sombra con tu primary-color-hover */
+  transition: transform 0.3s ease-in-out;
+}
+
+.about-img:hover {
+  transform: scale(1.05);
+}
+
+/* --- */
+
+/* Media Queries para responsividad */
+@media (max-width: 768px) {
+  .about-content {
     flex-direction: column;
-    align-items: center;
-    background-color: var(--background-color);
-    color: var(--text-color);
     text-align: center;
   }
-  
-#about-placeholder h2 {
-    color: var(--primary-color);
-    text-shadow: 1px 1px 4px var(--primary-color);
-    margin-bottom: 40px;
-    font-size: 2em;
-  }
-  
-.about-content {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    max-width: 1000px;
-    justify-content: center;
-    align-items: center;
-    gap: 40px;
-  }
-  
-.about-img {
-    width: 200px;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 50%;
-    border: 3px solid var(--primary-color);
-    box-shadow: 0 0 15px var(--primary-color-hover);
-  }
-  
-.about-text {
-    max-width: 500px;
-    font-size: 1.1rem;
-    line-height: 1.6;
-  }
-  
-.about-text p {
-    margin-bottom: 15px;
+
+  .about-text {
+    max-width: 100%;
+    font-size: 1rem;
   }
 
-@media (max-width: 768px) {
-    .about-content {
-      flex-direction: column;
-      text-align: center;
-    }
-  
-    .about-img {
-      width: 150px;
-      height: 150px;
-    }
-  
-    .about-text {
-      font-size: 1rem;
-    }
+  .about-text h2 {
+    font-size: 2em;
   }
-  
+
+  .about-img {
+    width: 180px;
+    height: 180px;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-placeholder {
+    padding: 40px 15px;
+  }
+
+  .about-text h2 {
+    font-size: 1.8em;
+  }
+}

@@ -1,227 +1,257 @@
+/* ================================
+   VARIABLES Y ESTILOS GLOBALES
+================================= */
+:root {
+  /* Colores principales */
+  --primary-color: #5e17eb;
+  --primary-color-hover: #7b4feb;
+  --background-color: #262526;
+  --surface-color: #303030;
+  --text-color: #f5f5f5;
+}
+
 * {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 html {
-    scroll-behavior: smooth;
-  }
-
-a {
-    text-decoration: none;
-    list-style: none;
-    color: var(--text-color);
-}
-
-ul {
-    text-decoration: none;
-    list-style: none;
-    color: var(--text-color);
-}
-
-:root {
-    /* Colores principales */
-    --primary-color: #5e17eb; /* Tu púrpura vibrante, ideal para acentos y elementos interactivos */
-    --background-color: #262526; /* Fondo gris muy oscuro, la base de tu diseño */
-    --text-color: #F5F5F5; /* Blanco muy claro para el texto principal, excelente contraste */
-
-    /* Variaciones de colores (para estados interactivos o superficies) */
-    --primary-color-hover: #7b4feb; /* Un tono ligeramente más claro del púrpura para el hover de botones/enlaces */
-    --surface-color: #303030; /* Un gris un poco más claro que el fondo, útil para tarjetas o modales elevados */
+  scroll-behavior: smooth;
 }
 
 body {
-    color: var(--text-color);
-    background-color: var(--background-color);
-    text-align: center;
+  color: var(--text-color);
+  background-color: var(--background-color);
+  text-align: center;
 }
 
+a {
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+ul {
+  list-style: none;
+  color: var(--text-color);
+}
+
+/* ================================
+   HEADER
+================================= */
 #header-placeholder {
-    position: fixed;
-    padding: 20px 20px 10px 20px;
-    top: 0;
-    left: 0;
-    width:100%;
-    z-index: 1000;
-    display: flex;
-    justify-content: space-around;
-    font-weight: bold; 
-    white-space: nowrap;
-    backdrop-filter: blur(10px);
-
-    .kevin_moreno {
-        font-size: 1rem;
-
-        .coder {
-            color: var(--primary-color);
-            text-shadow: 1px 1px 4px var(--primary-color);
-            font-size: 1.3rem; 
-        }
-    }
-
-    .navbar {
-        display: flex;
-
-        li {
-            margin: 10px;
-        }
-
-        a:hover {
-            color: var(--primary-color);
-            text-shadow: 1px 1px 4px var(--primary-color);
-        }
-    }
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-around;
+  padding: 20px 20px 10px 20px;
+  font-weight: bold;
+  white-space: nowrap;
+  backdrop-filter: blur(10px);
 }
 
+#header-placeholder .kevin_moreno {
+  font-size: 1rem;
+}
+
+#header-placeholder .kevin_moreno .coder {
+  color: var(--primary-color);
+  text-shadow: 1px 1px 4px var(--primary-color);
+  font-size: 1.3rem;
+}
+
+#header-placeholder .navbar {
+  display: flex;
+}
+
+#header-placeholder .navbar li {
+  margin: 10px;
+}
+
+#header-placeholder .navbar a:hover {
+  color: var(--primary-color);
+  text-shadow: 1px 1px 4px var(--primary-color);
+}
+
+/* ================================
+   HERO
+================================= */
 #hero-placeholder {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    text-align: center;
-    margin: 10px;
-
-    img {
-        width: 25%;
-    }
-    
-    .cta {
-        display: flex;
-        justify-content: center;
-        font-weight: bold;
-
-        button {
-            margin: 10px;
-            padding: 10px;
-            border-radius: 20px;
-        }
-
-        button:hover {
-            background-color: var(--surface-color);
-            border: 1px solid var(--surface-color);
-        }
-
-        .cv {
-            background-color: var(--background-color);
-            border: 1px solid var(--primary-color);
-        }
-
-        .wpp {
-            background-color: var(--primary-color);
-            border: 1px solid var(--background-color);
-
-        }
-    }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+  margin: 10px;
 }
 
-    #main {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
+#hero-placeholder img {
+  width: 20%;
+}
 
-        #projects-placeholder {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        margin: 10px;
+#hero-placeholder .cta {
+  display: flex;
+  justify-content: center;
+  font-weight: bold;
+}
 
+#hero-placeholder .cta button {
+  margin: 10px;
+  padding: 10px;
+  border-radius: 20px;
+  cursor: pointer;
+}
 
+#hero-placeholder .cta button:hover {
+  background-color: var(--surface-color);
+  border: 1px solid var(--surface-color);
+}
 
-        .content-projects {
-            margin: 10px;
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-            gap: 20px;
-            justify-content: center;
-            align-items: center;
+#hero-placeholder .cta .cv {
+  background-color: var(--background-color);
+  border: 1px solid var(--primary-color);
+}
 
-            img {
-            width: 12rem;
-            padding: 30px;
-            }
-        }
+#hero-placeholder .cta .wpp {
+  background-color: var(--primary-color);
+  border: 1px solid var(--background-color);
+}
 
-        .item-project {
-            background-color: var(--surface-color);
-            border-radius: 20px;
-            padding: 20px;
-            width: 50%;
-            height: auto;
-            flex-basis: 300px;
-            flex-grow: 1;
-        }
+/* ================================
+   MAIN > PROJECTS
+================================= */
+#main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
-        button {
-            margin: 10px;
-            padding: 10px;
-            background-color: var(--surface-color);
-            border: 1px solid var(--primary-color);
-            border-radius: 20px;
-        }
+#projects-placeholder {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 10px;
+}
 
-        button:hover {
-            background-color: var(--background-color);
-            border: 1px solid var(--background-color);
-        }
-    }
+#projects-placeholder .content-projects {
+  margin: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
 
-    #contact-placeholder {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 90vh;
-        text-align: center;
-        margin: 10px;
-        font-size: 1em;
+#projects-placeholder .content-projects img {
+  width: 12rem;
+  padding: 30px;
+}
 
-        .me {
-            color: var(--primary-color);
-            text-shadow: 1px 1px 4px var(--primary-color);
-            font-weight: 100px;
-        }
+#projects-placeholder .item-project {
+  background-color: var(--surface-color);
+  border-radius: 20px;
+  padding: 20px;
+  width: 50%;
+  flex-basis: 300px;
+  flex-grow: 1;
+}
 
-        div {
-            padding: 15px;
-        }
+#projects-placeholder button {
+  margin: 10px;
+  padding: 10px;
+  background-color: var(--surface-color);
+  border: 1px solid var(--primary-color);
+  border-radius: 20px;
+  cursor: pointer;
+}
 
-        li {
-            padding: 5px;
-            color: var(--primary-color);
-        }
+#projects-placeholder button:hover {
+  background-color: var(--background-color);
+  border-color: var(--background-color);
+}
 
-        li:hover {
-            text-shadow: 1px 1px 3px var(--primary-color);
-            border: 1px solid var(--primary-color);
-            border-radius: 20px;
-            a {
-                color: var(--primary-color);
-            }
+/* ================================
+   CONTACT
+================================= */
+#contact-placeholder {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+  text-align: center;
+  margin: 10px;
+  font-size: 1em;
+  flex-direction: column;
+}
 
-        }
-    }
+#contact-placeholder .me {
+  color: var(--primary-color);
+  text-shadow: 1px 1px 4px var(--primary-color);
+  font-weight: 100px;
+}
+
+#contact-placeholder div {
+  padding: 15px;
+}
+
+#contact-placeholder li {
+  padding: 5px;
+  color: var(--primary-color);
+}
+
+#contact-placeholder li:hover {
+  text-shadow: 1px 1px 3px var(--primary-color);
+  border: 1px solid var(--primary-color);
+  border-radius: 20px;
+}
+
+#contact-placeholder li:hover a {
+  color: var(--primary-color);
+}
+
+/* ================================
+   SKILLS & FOOTER
+================================= */
+#skills-placeholder {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 50px;
+  padding: auto;
 }
 
 #footer-placeholder {
-    margin: 50px;
-    padding: auto;
+  margin: 50px;
+  padding: auto;
 }
 
-/*Desing responsive*/
+/* ================================
+   RESPONSIVE DESIGN
+================================= */
 @media (max-width: 768px) {
-    #header-placeholder {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
+  #header-placeholder {
+    flex-direction: column;
+    align-items: center;
+  }
 
-    #hero-placeholder {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
+  #hero-placeholder {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #contact-placeholder {
+    font-size: 1rem;
+    flex-direction: column;
+    align-items: center;
+  }
 }
